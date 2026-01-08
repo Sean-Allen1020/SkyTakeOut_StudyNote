@@ -1,0 +1,38 @@
+swagger创建：
+	- 首先pom文件里引入knife4j坐标
+	<dependency>
+    		<groupId>com.github.xiaoymin</groupId>
+    		<artifactId>knife4j-spring-boot-starter</artifactId>
+    		<version>3.0.2</version>
+	</dependency>
+
+	- 创建配置类，该项目中为 WebMvcConfiguration ，类中的 docket 方法，就是knife4j相关配置
+   	 @Bean
+    	public Docket docket() {
+        	ApiInfo apiInfo = new ApiInfoBuilder()
+                	.title("苍穹外卖项目接口文档")
+                	.version("2.0")
+                	.description("苍穹外卖项目接口文档")
+                	.build();
+        	Docket docket = new Docket(DocumentationType.SWAGGER_2)
+                	.apiInfo(apiInfo)
+                	.select()
+                	.apis(RequestHandlerSelectors.basePackage("com.sky.controller"))
+                	.paths(PathSelectors.any())
+                	.build();
+        	return docket;
+    	}
+	- 再设置静态资源映射
+	protected void addResourceHandlers(ResourceHandlerRegistry registry) {
+        	registry.addResourceHandler("/doc.html").addResourceLocations("classpath:/META-INF/resources/");
+        	registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
+	}
+
+  以上swagger创建流程和代码是固定的，只需要复制代码即可
+
+swagger 注解:
+	@Api			用在类上，例如Controller，表示对类的说明
+	@ApiModel		用在类上，例如entity、DTO、VO
+	@ApiModelProperty	用在属性上，描述属性信息
+	@ApiOperation		用在方法上，例如Controller的方法，说明方法的用途、作用
+	
