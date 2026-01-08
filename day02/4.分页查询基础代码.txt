@@ -1,0 +1,34 @@
+分页查询的方式：
+	1.首先创建PageResult类用来封装查询结果，变量一般为 long total; list<T> records;
+							    总记录数       数据集合(T为返回前端的封装类)
+
+	2.创建分页查询的DTO类，以做到精准封装，变量一般为 查询条件(id等)，int page; int pageSize(单页数据量)
+												↓
+											前端将请求传入DTO类
+	3.Controller层
+		    public Result<PageResult> page(EmployeePageQueryDTO employeePageQueryDTO) {
+				
+        		log.info("员工分页查询: {}", employeePageQueryDTO);
+
+        		return Result.success(employeeService.pageQuery(employeePageQueryDTO));
+    		}
+	
+	4.Service层
+			public PageResult pageQuery(EmployeePageQueryDTO employeePageQueryDTO){
+
+				//  1.设置分页查询参数：page，pageSize
+				PageHelper.startPage(employeePageQueryDTO.getPage(), employeePageQueryDTO.getPageSize());
+
+				//  2.调用Mapper方法，将查询结果代入PageHelper提供的Page类里  Page类本质是一个list集合
+				Page<Employee> p = employeeMapper.pageQuery(employeePageQueryDTO);
+
+				//  3.封装并返回结果
+				return new PageResult(p.getTotal(), p.getResult());
+			};
+
+	5.Mapper层
+			Page<Employee> pageQuery(EmployeePageQueryDTO employeePageQueryDTO);
+
+		付上mapper.xml中的sql语句：
+			
+ 
