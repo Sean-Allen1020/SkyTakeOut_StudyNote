@@ -1,3 +1,8 @@
+事前提醒：
+	苍穹外卖项目（Spring Boot 2.x + Knife4j 3.0.2 + Swagger2/Springfox）的一套旧配置模板，能跑本项目即可。
+	现代项目中会使用OpenAPI3/springdoc，其配置方式会不同。
+	所以只做了解，不做深入学习
+
 swagger创建：
 	- 首先pom文件里引入knife4j坐标
 	<dependency>
