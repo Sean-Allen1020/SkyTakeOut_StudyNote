@@ -1,0 +1,39 @@
+Vue框架下的前后端增删改查基本代码写法(后端指controller层)
+
+前端传递的参数的形式：
+- query：用 params 包裹的是query参数，它会直接拼接到url上，传给后端，后端直接用对应的变量或类去接就可以
+- json： 什么加工都没有的是常规json参数，后端需要用 @RequestBody注释 来明确变量或类来接受该数据
+- path： ${..} 的是path参数，后端需要用 @PathVariable注释 来明确变量或类来接收该数据
+
+查：
+    前端：
+        axios.get('/url', { params: { page, pageSize, name } })
+
+    后端：
+        @GetMapping("/url")
+        public Result page(Integer page, Integer pageSize, String name) { ... }
+                            这里可以封装为DTO类，因为是query参数，所以不需要写多余的注释，直接写即可
+
+删：
+    前端：
+        axios.delete(`/url/${id}`)  ${..} 表示路径参数，后端需要用路径参数对应的注解
+    
+    后端：
+        @DeleteMapping("/url/{id}")
+        public Result delete(@PathVariable Long id) { ... }
+                              此处前端传来的id为path参数，
+                              要用上 @PathVariable 注解
+
+增/改：
+    前端：
+        axios.post('/url', { name, username, ... })  增
+        axios.put('/url', { name, username, ... })   改
+    
+    后端：
+        @PostMapping("/url")
+        public Result add(@RequestBody DTO dto) { ... }
+
+        @PutMapping("/url")
+        public Result update(@RequestBody DTO dto) { ... }
+                             
+                             由于是json参数，所以要注明@RequestBody
