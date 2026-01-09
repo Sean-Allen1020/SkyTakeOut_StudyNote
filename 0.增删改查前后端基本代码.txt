@@ -24,6 +24,8 @@ Vue框架下的前后端增删改查基本代码写法(后端指controller层)
                               此处前端传来的id为path参数，
                               要用上 @PathVariable 注解
 
+                              tip：同理，根据id查询的处理，也可以用path参数。具体如何用根据具体设计来
+
 增/改：
     前端：
         axios.post('/url', { name, username, ... })  增
