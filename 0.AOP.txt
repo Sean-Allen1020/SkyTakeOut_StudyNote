@@ -1,0 +1,85 @@
+AOP各通知的相关基础代码模板可以参考：*/AOP-learning\springboot-aop-quickstart\src\main\java\com\itheima\aop
+
+AOP 面向切面编程：可以简单理解为，面向特定的方法进行编程，是一种编程思想，在不同框架下有不同的实现
+
+- 场景1：项目中部分业务方法运行较慢，定位执行耗时较长的方法，此时就需要在类下的每个方法处统计执行耗时
+- 场景2：执行增改操作的方法中，几乎都要记录操作人的id以及操作的创建/更新日期，每一个类似方法中都写上这样的代码，将会十分冗余
+- 场景3：记录系统操作日志
+- 场景4：权限控制
+
+AOP在这里的作用就是，将这类特定方法中通用的代码统一管理，使得程序：
+    - 减少重复代码
+    - 代码无入侵(不会修改目标方法本身)
+    - 提高开发效率，方便维护
+
+
+Spring框架下的AOP：
+- pom文件，引入AOP的依赖
+        <!-- AOP起步依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
+- 创建一个aop包，创建aop类 RecordTimeAspect.java (本次示范的aop类的功能是，统计每个service的方法的运行耗时)
+
+    @Aspect     //标识当前是一个AOP类
+    @Component
+    public class RecordTimeAspect {
+
+        @Around("execution(* com.itheima.service.impl.*.*(..))")
+        public Object recordTime(ProceedingJoinPoint pjp) throws Throwable {
+
+            //1. 记录方法运行的开始时间
+            long begin = System.currentTimeMillis();
+
+            //2. 执行原始的方法
+            Object result = pjp.proceed();
+
+            //3. 记录方法运行的结束时间，记录耗时
+            long end = System.currentTimeMillis();
+            log.info("方法：{} 执行耗时：{}ms", pjp.getSignature(), end - begin);
+
+            return result;
+        }
+    }
+
+AOP的通知类型：
+    1. @Around： 环绕通知，此注解标示的通知方法在目标方法前、后都被执行
+
+    2. @Before： 前置通知，此注解标示的通知方法在目标方法前被执行
+
+    3. @After： 后置通知，此注解标示的通知方法在目标方法后被执行，无论是否有异常都会执行
+
+    4. @AfterReturning： 返回后通知，此注解标示的通知方法在目标方法后被执行，有异常不会执行
+
+    5. @AfterThrowing： 异常后通知，此注解标示的通知方法发生异常后执行
+
+    注意：@Around需要自己调用 ProceedingJoinPoint.proceed() 来让目标方法执行，其它通知不需要考虑目标方法执行
+          @Around方法的返回值，必须为Object，来接收目标方法的返回值
+
+通知顺序：
+    各个通知的执行顺序是默认按照类名的数字或字母排序来决定先后的，
+    如果想按照自己的设计顺序运行，可以通过 @Order(数字) 注解来定义排序，这样就不用改类名了
+
+
+切入点表达式：
+    1. execution(返回值 包名.类名.方法名(方法参数));  根据方法签名来匹配
+            
+            * 可以代替表达式里的单个独立的任意内容： execution(* com.*.service.*.update*(*))  *表示任意返回值，包名，类名，方法名，update* 表示 update开头的方法名
+            . 可以代替表达式里的连续的任意内容：    execution(* com..XxxService.update*(..)) ..表示任意层级，方法里的..表示任意数量的任意形参
+
+    2. @annotation (...);  根据注解来匹配
+            这里需要自定义注解，完整使用方式请看 AOP自定义注解模板.txt
+
+
+切入点表达式的抽取：
+    在写许多aop方法时，会遇到目标对象的路径，也就是切入点表达式是一样的。此时就可以用切入点注释 @Pointcut，来将同样的表达式抽取到一个方法里，后面进行调用即可
+
+    @Pointcut ("execution(* 表达式)")
+    private void pt()
+
+    @Before ("pt()")
+        ...
+    @Around ("pt()")
+        ...

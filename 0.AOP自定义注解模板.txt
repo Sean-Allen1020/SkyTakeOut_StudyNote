@@ -1,0 +1,34 @@
+基于注解@annotation 来匹配目标方法
+
+- 首先创建自定义注解包 annotation，然后创建注解类
+
+	@Target(ElementType.METHOD)			//这个注解只能写在方法上
+	@Retention(RetentionPolicy.RUNTIME)		//注解会被保留到运行时
+	public @interface LogOperation {
+
+			//定义一个名为 LogOperation 的注解
+	}
+
+
+- 在AOP类的方法中加入 annotation 注解
+
+	@Aspect
+	@Order(3)	//可以不要
+	@Component
+	public class MyAspect{
+
+		//前置通知
+		@Before("@annotation(com.xu.annotation.LogOperation)")	//annotation() 中的是自定义注解的全类名，也就是类的路径
+		public void before(){
+			log.info("MyAspect -> before ...");
+		}
+
+		//后置通知
+		@After("@annotation(com.xu.annotation.LogOperation)")
+		public void after(){
+			log.info("MyAspect -> after ...");
+		}
+	}
+
+
+- 在需要执行AOP方法的业务方法上写上自定义的注释 @LogOperation
