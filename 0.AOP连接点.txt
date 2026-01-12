@@ -1,0 +1,35 @@
+
+在Spring中，用JoinPoint抽象了连接点 (连接点就是指AOP所关联的目标方法，目标对象)，
+通过这个JoinPoint就可以获得连接点的各种信息
+
+    Around类型通知类：
+
+        @Around("execution(* com.xu.service.DeptService.*(..))")
+        public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
+
+            String className = joinPoint.getTarget().getClass().getName();  // 获取目标类名
+
+            Signature signature = joinPoint.getSignature();                 // 获取目标方法签名
+
+            String methodName = joinPoint.getSignature().getName();         // 获取目标方法名
+
+            Object[] args = joinPoint.getArgs();                            // 获取目标方法运行参数
+
+            Object res = joinPoint.proceed();                               // 执行原始方法，获取返回值（环绕通知）
+
+            return res;
+        }
+
+    其它类型通知类：
+
+        @Before("execution(* com.itheima.service.DeptService.*(..))")
+        public void before(JoinPoint joinPoint) {
+
+            String className = joinPoint.getTarget().getClass().getName();  // 获取目标类名
+
+            Signature signature = joinPoint.getSignature();                 // 获取目标方法签名
+
+            String methodName = joinPoint.getSignature().getName();         // 获取目标方法名
+
+            Object[] args = joinPoint.getArgs();                            // 获取目标方法运行参数
+        }
