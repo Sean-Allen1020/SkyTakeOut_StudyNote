@@ -1,0 +1,92 @@
+反射 - 允许对外部类的成员变量，成员方法，构造方法的信息进行编程访问，访问的范围可以覆盖外部类里的所有信息。
+
+    反射分两大步骤，获取与解剖
+        获取 为获取类对象，从中进一步获取成员变量/方法，构造方法
+        解剖 为解剖获取的变量/方法中的一切信息
+        
+
+    Java中，对类中各种信息的描述 (用于寻找反射方法名的规律)：
+        类          Class
+        构造方法    Constructo
+        成员变量    Field
+        成员方法    Method
+--------------------------------------------------------------------------
+获取：
+    获取类：
+        1. Class.forName("全类名");  全类名 → copy reference
+                Class class = Class.forName("com.xu.reflectTest.Student");
+        2. 类名.class
+                Class class = Student.class;
+        3. 对象.getClass();
+                Student s = new Student();
+                Class class = s.getClass();
+--------------------------------------------------------------------------
+    获取构造方法：
+        1. Constructor<?>[] getConstructors()                                  获取所有公共构造方法
+        2. Constructor<?>[] getDeclaredConstructors()                          获取所有构造方法
+        3. Constructor<T> getConstructor(Class<?>... parameterTypes)           获取单个特定公共构造方法 ()中写对应构造方法的参数的class字节码文件
+        4. Constructor<T> getDeclaredConstructor(Class<?>... parameterTypes)   获取单个特定构造方法     ()中同上
+
+            示例：
+                Constructor[] cons1 = Class.forName("com.xu.reflectTest.Student").getDeclaredConstructors();
+                Constructor cons2 = Class.forName("com.xu.reflectTest.Student").getDeclaredConstructor(String.class);
+    
+            获取构造方法的各种信息：
+                        cons2.getModifiers();         获取权限修饰符
+                        cons2.getParameters();        获取参数
+                        cons2.getParameterCount();    获取参数数量
+                        cons2.getParameterTypes();    获取参数类型
+            
+            通过反射构造方法来创建实例：
+                        cons2.newInstance(...);   括号里填原构造方法的参数即可
+                    
+            如果该构造方法是 private，则可以暴力反射:
+                        cons2.setAccessible(true);
+                        cons2.newInstance(...); 
+--------------------------------------------------------------------------
+    获取成员变量：
+        1. Field[] getFields();                    返回所有公共成员变量对象的数组
+        2. Field[] getDeclaredFields();            返回所有成员变量对象的数组
+        3. Field getField("变量名");                返回单个公共成员变量对象
+        4. Field getDeclaredField("变量名");        返回单个成员变量对象
+
+            示例：
+                Field[] fields = Class.forName("com.xu.reflectTest.Student").getFields();
+                Field name = Class.forName("com.xu.reflectTest.Student").getField("name");
+
+            获取成员变量的各种信息：
+                name.getModifiers();   获取权限修饰符
+                name.getName();        获取变量名
+                name.getType();        获取变量类型
+
+                name.get(对象实例);    获取对象实例成员变量的值 (需要先new对象)，如果是private变量，依然可以用 .setAccessible(true) 来暴力反射
+                name.set(对象实例，修改值);  修改对象中成员变量的值
+--------------------------------------------------------------------------
+    获取成员方法：
+        1. Method[] getMethods():                                               返回所有公共成员方法对象的数组，包括继承的
+        2. Method[] getDeclaredMethods():                                       返回所有成员方法对象的数组，不包括继承的
+        3. Method getMethod(String name, Class<?>... parameterTypes)：          返回单个公共成员方法对象
+        4. Method getDeclaredMethod(String name, Class<?>... parameterTypes)：  返回单个成员方法对象                
+
+            示例：
+                Method[] methods = Class.forName("com.xu.reflectTest.Student").getMethods();
+                Method method = Class.forName("com.xu.reflectTest.Student").getMethod(方法名, 方法参数的class字节码文件);
+
+            获取成员方法的各种信息：
+                method.getModifiers();
+                method.getName();
+                method.getParameters();
+                method.getExceptions();
+            
+            获取成员方法并运行：    private的情况下，要 .setAccessible(true);
+                new 实例;
+                获取方法;
+                method.invoke(实例, 方法参数的传参);
+
+                比如:
+                public class Conduct{
+                    public void eat(String food){...}
+                }
+                ...
+                method.invoke(conduct, "rice");
+                        
