@@ -7,15 +7,24 @@
         @Around("execution(* com.xu.service.DeptService.*(..))")
         public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
 
-            String className = joinPoint.getTarget().getClass().getName();  // 获取目标类名
+            String className = joinPoint.getTarget().getClass().getName();              // 获取目标类名
 
-            Signature signature = joinPoint.getSignature();                 // 获取目标方法签名
+            Signature signature = joinPoint.getSignature();                             // 获取目标方法签名
 
-            String methodName = joinPoint.getSignature().getName();         // 获取目标方法名
+            Method method = ((MethodSignature) joinPoint.getSignature()).getMethod();   //获取方法元信息
+                    method.getName()：                      // 获取方法名
 
-            Object[] args = joinPoint.getArgs();                            // 获取目标方法运行参数
+                    method.getParameterTypes()：            // 获取形参类型列表
 
-            Object res = joinPoint.proceed();                               // 执行原始方法，获取返回值（环绕通知）
+                    method.getAnnotation(AutoFill.class)：  // 获取方法上的注解
+
+                    method.invoke(实例, 方法参数的传参)：     // 反射运行方法            
+
+            String methodName = joinPoint.getSignature().getName();                     // 获取目标方法名
+
+            Object[] args = joinPoint.getArgs();                                        // 获取目标方法运行参数
+
+            Object res = joinPoint.proceed();                                           // 执行原始方法，获取返回值（环绕通知）
 
             return res;
         }
@@ -25,11 +34,20 @@
         @Before("execution(* com.itheima.service.DeptService.*(..))")
         public void before(JoinPoint joinPoint) {
 
-            String className = joinPoint.getTarget().getClass().getName();  // 获取目标类名
+            String className = joinPoint.getTarget().getClass().getName();              // 获取目标类名
 
-            Signature signature = joinPoint.getSignature();                 // 获取目标方法签名
+            Signature signature = joinPoint.getSignature();                             // 获取目标方法签名
 
-            String methodName = joinPoint.getSignature().getName();         // 获取目标方法名
+            Method method = ((MethodSignature) joinPoint.getSignature()).getMethod();   //获取方法元信息
+                    method.getName()：                      // 获取方法名
 
-            Object[] args = joinPoint.getArgs();                            // 获取目标方法运行参数
+                    method.getParameterTypes()：            // 获取形参类型列表
+
+                    method.getAnnotation(AutoFill.class)：  // 获取方法上的注解
+
+                    method.invoke(实例, 方法参数的传参)：     // 反射运行方法
+
+            String methodName = joinPoint.getSignature().getName();                     // 获取目标方法名
+
+            Object[] args = joinPoint.getArgs();                                        // 获取目标方法运行参数
         }
