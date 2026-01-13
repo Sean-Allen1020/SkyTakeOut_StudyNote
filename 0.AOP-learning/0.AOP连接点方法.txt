@@ -22,7 +22,7 @@
 
             String methodName = joinPoint.getSignature().getName();                     // 获取目标方法名
 
-            Object[] args = joinPoint.getArgs();                                        // 获取目标方法运行参数
+            Object[] args = joinPoint.getArgs();                                        // 获取目标方法运行时参数
 
             Object res = joinPoint.proceed();                                           // 执行原始方法，获取返回值（环绕通知）
 
@@ -49,5 +49,5 @@
 
             String methodName = joinPoint.getSignature().getName();                     // 获取目标方法名
 
-            Object[] args = joinPoint.getArgs();                                        // 获取目标方法运行参数
+            Object[] args = joinPoint.getArgs();                                        // 获取目标方法运行时参数
         }
