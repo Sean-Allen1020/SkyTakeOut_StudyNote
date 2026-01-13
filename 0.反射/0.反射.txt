@@ -25,7 +25,7 @@
         1. Constructor<?>[] getConstructors()                                  获取所有公共构造方法
         2. Constructor<?>[] getDeclaredConstructors()                          获取所有构造方法
         3. Constructor<T> getConstructor(Class<?>... parameterTypes)           获取单个特定公共构造方法 ()中写对应构造方法的参数的class字节码文件
-        4. Constructor<T> getDeclaredConstructor(Class<?>... parameterTypes)   获取单个特定构造方法     ()中同上
+        4. Constructor<T> getDeclaredConstructor(Class<?>... parameterTypes)   获取单个特定构造方法     ()中写对应构造方法的参数的class字节码文件
 
             示例：
                 Constructor[] cons1 = Class.forName("com.xu.reflectTest.Student").getDeclaredConstructors();
@@ -65,13 +65,13 @@
     获取成员方法：
         1. Method[] getMethods():                                               返回所有公共成员方法对象的数组，包括继承的
         2. Method[] getDeclaredMethods():                                       返回所有成员方法对象的数组，不包括继承的
-        3. Method getMethod(String name, Class<?>... parameterTypes)：          返回单个公共成员方法对象
-        4. Method getDeclaredMethod(String name, Class<?>... parameterTypes)：  返回单个成员方法对象                
+        3. Method getMethod("方法名", Class<?>... parameterTypes)：             返回单个公共成员方法对象  ()后半写对应成员方法的参数的class字节码文件 
+        4. Method getDeclaredMethod("方法名", Class<?>... parameterTypes)：     返回单个成员方法对象     ()后半写对应成员方法的参数的class字节码文件           
 
             示例：
                 Method[] methods = Class.forName("com.xu.reflectTest.Student").getMethods();
-                Method method = Class.forName("com.xu.reflectTest.Student").getMethod(方法名, 方法参数的class字节码文件);
-
+                Method method = Class.forName("com.xu.reflectTest.Student").getMethod("方法名", 方法参数的class字节码文件);
+                                                                                                String.class
             获取成员方法的各种信息：
                 method.getModifiers();
                 method.getName();
