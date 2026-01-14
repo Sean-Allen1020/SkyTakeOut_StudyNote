@@ -80,13 +80,15 @@
             
             获取成员方法并运行：    private的情况下，要 .setAccessible(true);
                 new 实例;
-                获取方法;
+                Class.forName("com.xu.reflectTest.Student").getMethods(); // 获取方法
                 method.invoke(实例, 方法参数的传参);
 
                 比如:
                 public class Conduct{
                     public void eat(String food){...}
                 }
-                ...
+
+                Method method = Conduct.getClass().getMethod("eat", String.class);
+
                 method.invoke(conduct, "rice");
                         

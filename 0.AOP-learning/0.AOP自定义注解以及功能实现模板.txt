@@ -35,13 +35,83 @@
 
 
 项目代码完整AOP实现模板(苍穹外卖)：
-	0. 创建枚举文件，明确数据库操作类型
+	0. 创建枚举文件，明确数据库操作类型 (这一步操作是为了让编译时出现错误就直接报错，而不是运行的时候才出问题)
+
+			public enum OperationType {
+
+				// 更新操作
+				UPDATE,
+
+				// 插入操作
+				INSERT
+			}
 	
 
-	1. 创建自定义注解类 annotation，然后创建注解类
+	1. 创建自定义注解类 annotation，然后创建注解类，用于标识需要公共字段自动填充的特定方法
+
+			@Target(ElementType.METHOD)
+			@Retention(RetentionPolicy.RUNTIME)		//标记为用于METHOD的注解，并且是运行时生效
+			public @interface AutoFill {
+				
+				// 调用枚举类
+				OperationType value();
+			}
 
 
 	2. 创建AOP类，加入相关注解，以及AOP方法
 
+			@Aspect
+			@Component
+			public class AutoFillAspect {
+				
+				// 创建切入点，虽然直接写在通知注释处也可以，但是统一在切入方便管理
+				@Pointcut("execution(* com.sky.mapper.*.*(..)) && @annotation(com.sky.annotation.AutoFill)")	// 写入两种切入点表达式，以做到精确匹配
+				public void pointcutAutoFill() {}
+
+				@Before("pointcutAutoFill()")
+				public void autoFill(JoinPoint jp) throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
+
+					//1.获取被拦截到的mapper方法的数据库操作类型 insert or update						getSignature	getMethod ← 这个是Spring独有的
+					Method method = ((MethodSignature) jp.getSignature()).getMethod();  			//获取方法签名后,获取方法元信息
+					OperationType operationType = method.getAnnotation(AutoFill.class).value(); 	//通过方法元信息，获取注解的值
+
+					//2.通过反射，获取mapper方法的运行时参数 -- 实体对象
+					Object[] enitys = jp.getArgs();
+
+					//非空判定
+					if(enitys.length == 0){
+						return;
+					}
+					//获取实体对象  ← 该项目约定实体类参数放到形参的第一位置，保证 0 号元素必定是实体类参数
+					Object enity = enitys[0];
+
+					//3.通过反射，获取成员方法							方法名字符串	  形参class字节码文件
+					Method setCreateTime = enity.getClass().getMethod("setCreateTime", LocalDateTime.class);
+					Method setUpdateTime = enity.getClass().getMethod("setUpdateTime", LocalDateTime.class);
+					Method setCreateUser = enity.getClass().getMethod("setCreateUser", Long.class);
+					Method setUpdateUser = enity.getClass().getMethod("setUpdateUser", Long.class);
+
+					//4.对获取的实体对象的公共属性，根据不同操作类型，用反射进行赋值
+					if (operationType == OperationType.INSERT) {
+
+											 实体对象	参数值
+						setCreateTime.invoke(enity, LocalDateTime.now());
+						setUpdateTime.invoke(enity, LocalDateTime.now());
+						setCreateUser.invoke(enity, BaseContext.getCurrentId());
+						setUpdateUser.invoke(enity, BaseContext.getCurrentId());
+					}
+					if (operationType == OperationType.UPDATE) {
+						setUpdateTime.invoke(enity, LocalDateTime.now());
+						setUpdateUser.invoke(enity, BaseContext.getCurrentId());
+					}
+				}
+			}
+
 
 	3. 在目标方法处写上自定义注解
+
+			@AutoFill(OperationType.INSERT)
+			void insert(Employee employee);
+
+			@AutoFill(OperationType.UPDATE)
+			void update(Employee employee);
