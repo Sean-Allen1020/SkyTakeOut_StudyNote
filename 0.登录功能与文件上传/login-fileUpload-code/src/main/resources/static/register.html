@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ログイン</title>
+
+  <!-- 引入Vue.js 的核心代码库 -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <!-- 引入 Axios -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  <link rel="stylesheet" href="CSS/register-style.css">
+</head>
+<body>
+<div id="app">
+  <main class="card">
+    <h1>会社管理システム・アカウント</h1>
+    <p class="sub">操作：新規登録、ログイン、パスワード変更。</p>
+    <div class="btn-row">
+      <a class="btn link">新規登録</a>
+      <button @click="openLogin" class="btn primary">ログイン</button>
+      <button class="btn">パスワード変更</button>
+    </div>
+  </main>
+
+  <!-- ログイン对话框 -->
+  <dialog ref="loginDia">
+    <h3 class="dg-title">ログイン</h3>
+    <div class="form">
+      <div class="field">
+        <label>アカウント名</label>
+        <input class="input" v-model="logInfo.username" autocomplete="username" />
+      </div>
+      <div class="field">
+        <label>パスワード</label>
+        <input class="input" v-model="logInfo.password" type="password" autocomplete="current-password" />
+      </div>
+      <div class="split"></div>
+      <div class="actions">
+        <button class="btn link" @click="closeLogin">取消</button>
+        <button class="btn primary" @click="login">ログイン</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- パスワード変更对话框 -->
+  <dialog>
+    <h3 class="dg-title">パスワード変更</h3>
+    <form class="form">
+      <div class="field">
+        <label>旧パスワード</label>
+        <input class="input" name="oldPassword" type="password" autocomplete="current-password" />
+      </div>
+      <div class="field">
+        <label>新パスワード</label>
+        <input class="input" name="newPassword" type="password" autocomplete="new-password" />
+      </div>
+      <div class="field">
+        <label>パスワード変更確認</label>
+        <input class="input" name="confirmPassword" type="password" autocomplete="new-password" />
+      </div>
+      <div class="split"></div>
+      <div class="actions">
+        <button class="btn link">取消</button>
+        <button class="btn primary">変更</button>
+      </div>
+    </form>
+  </dialog>
+</div>
+
+<script src="./json/registerJS.js"></script>
+
+</body>
+</html>

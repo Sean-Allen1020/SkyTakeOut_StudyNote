@@ -1,20 +1,24 @@
-#数据源配置
 spring:
+  application:
+    name: login-fileUpload-code
+
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/tlias
     username: root
     password: 123
-#mybatis配置
+    url: jdbc:mysql://localhost:3306/sky_take_out
+
+# mybatis??
 mybatis:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#    ????
     map-underscore-to-camel-case: true
 
-
-
-
-
+# ??????????
+logging:
+  level:
+    org.springframework.jdbc.support.JdbcTransactionManager: debug
 
 
 
