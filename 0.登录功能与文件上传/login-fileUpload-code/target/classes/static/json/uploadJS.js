@@ -1,5 +1,4 @@
 const { createApp } = Vue
-const { ElMessage } = ElementPlus
 createApp({
     data() {
         return {

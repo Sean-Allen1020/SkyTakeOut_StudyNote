@@ -5,25 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9fec9dc-a24e-44ea-bf86-16b2c8b1a90b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../0.AOP-learning/springboot-aop-quickstart/springboot-aop-quickstart.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.AOP-learning/springboot-aop-quickstart/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.AOP-learning/springboot-aop-quickstart/target/classes/com/itheima/SpringbootAopQuickstartApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.AOP-learning/springboot-aop-quickstart/target/classes/com/itheima/anno/LogOperation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.AOP-learning/springboot-aop-quickstart/target/classes/com/itheima/aop/MyAspect1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.AOP-learning/springboot-aop-quickstart/target/classes/com/itheima/aop/MyAspect2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.AOP-learning/springboot-aop-quickstart/target/classes/com/itheima/aop/MyAspect3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.AOP-learning/springboot-aop-quickstart/target/classes/com/itheima/aop/MyAspect4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.AOP-learning/springboot-aop-quickstart/target/classes/com/itheima/aop/MyAspect5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.AOP-learning/springboot-aop-quickstart/target/classes/com/itheima/aop/MyAspect6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.AOP-learning/springboot-aop-quickstart/target/classes/com/itheima/aop/RecordTimeAspect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.AOP-learning/springboot-aop-quickstart/target/classes/com/itheima/controller/DeptController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.AOP-learning/springboot-aop-quickstart/target/classes/com/itheima/mapper/DeptMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.AOP-learning/springboot-aop-quickstart/target/classes/com/itheima/pojo/Dept.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.AOP-learning/springboot-aop-quickstart/target/classes/com/itheima/pojo/Result.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.AOP-learning/springboot-aop-quickstart/target/classes/com/itheima/service/DeptService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.AOP-learning/springboot-aop-quickstart/target/classes/com/itheima/service/impl/DeptServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pojo/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/pojo/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/json/registerJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/json/registerJS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/json/uploadJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/json/uploadJS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/upload.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,9 +22,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -64,50 +54,66 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.register.html.executor": "Run",
-    "JavaScript Debug.upload.html.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found": "Database connection parameters found",
-    "Notification.DoNotAsk-DatabaseConfigFileWatcher.found": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.register.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.upload.html.executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;Database connection parameters found&quot;,
+    &quot;Notification.DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.LoginFileUploadCodeApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\xu.anlun\Desktop\Program Practice\苍穹外卖学习笔记\0.登录功能与文件上传\login-fileUpload-code\src\main\resources\static" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.upload.html">
+  <component name="RunManager" selected="Spring Boot.LoginFileUploadCodeApplication">
     <configuration name="register.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/login-fileUpload-code/static/register.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="upload.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/login-fileUpload-code/static/upload.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="registerJS.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/main/resources/static/json/registerJS.js" working-dir="$PROJECT_DIR$/src/main/resources/static/json">
+      <method v="2" />
+    </configuration>
+    <configuration name="LoginFileUploadCodeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="login-fileUpload-code" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.loginfileuploadcode.LoginFileUploadCodeApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.upload.html" />
         <item itemvalue="JavaScript Debug.register.html" />
+        <item itemvalue="Node.js.registerJS.js" />
+        <item itemvalue="JavaScript Debug.upload.html" />
       </list>
     </recent_temporary>
   </component>
@@ -143,6 +149,26 @@
       <workItem from="1768443985475" duration="72000" />
       <workItem from="1768444111550" duration="1001000" />
       <workItem from="1768445235568" duration="550000" />
+      <workItem from="1768446031635" duration="1808000" />
+      <workItem from="1768452084771" duration="128000" />
+      <workItem from="1768452282186" duration="646000" />
+      <workItem from="1768452990000" duration="130000" />
+      <workItem from="1768453141990" duration="18000" />
+      <workItem from="1768453177580" duration="203000" />
+      <workItem from="1768453441676" duration="262000" />
+      <workItem from="1768453781860" duration="459000" />
+      <workItem from="1768454266665" duration="29000" />
+      <workItem from="1768454401188" duration="320000" />
+      <workItem from="1768454746921" duration="1585000" />
+      <workItem from="1768456590131" duration="128000" />
+      <workItem from="1768457069899" duration="2089000" />
+      <workItem from="1768459266213" duration="739000" />
+      <workItem from="1768460038191" duration="265000" />
+      <workItem from="1768460365261" duration="4000" />
+      <workItem from="1768460491697" duration="30000" />
+      <workItem from="1768460705871" duration="783000" />
+      <workItem from="1768461503880" duration="3000" />
+      <workItem from="1768462409776" duration="370000" />
     </task>
     <servers />
   </component>
