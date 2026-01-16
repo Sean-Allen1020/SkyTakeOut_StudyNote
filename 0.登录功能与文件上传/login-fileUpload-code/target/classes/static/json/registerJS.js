@@ -1,4 +1,6 @@
 const { createApp } = Vue
+const { ElMessage } = ElementPlus
+
 createApp({
     data() {
         return {
@@ -43,6 +45,7 @@ createApp({
                 // alert(res.data.msg) //login success 表示
                 //系统页面跳转
                 window.location.replace(`${window.location.origin}/upload.html`);
+                ElMessage.success('ログイン成功');
             }else{
                 alert(res.data.msg);//login fail 表示
             }

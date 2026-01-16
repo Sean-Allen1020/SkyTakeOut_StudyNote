@@ -8,17 +8,23 @@ spring:
     password: 123
     url: jdbc:mysql://localhost:3306/sky_take_out
 
-# mybatis??
+# mybatis
 mybatis:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-#    ????
+
     map-underscore-to-camel-case: true
 
-# ??????????
 logging:
   level:
     org.springframework.jdbc.support.JdbcTransactionManager: debug
 
+#令牌生成相关配置
+test:
+  jwt:
+#    密钥
+    secret-key: 0yk3l8mRUqo0b514atzOJ3a0OFDk2BNX2xBLxEE7xZQ=
+#    有效期
+    ttl: 3600000
 
 

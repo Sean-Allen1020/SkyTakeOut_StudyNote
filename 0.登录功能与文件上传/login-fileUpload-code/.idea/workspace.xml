@@ -5,6 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9fec9dc-a24e-44ea-bf86-16b2c8b1a90b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/json/registerJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/json/registerJS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/json/uploadJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/json/uploadJS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/upload.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../day02/3.ThreadLocal.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../day02/3.ThreadLocal.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +58,9 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JUnit.JwtTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JwtTest.testGenerateJwt.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.KeyGenerator.executor&quot;: &quot;Run&quot;,
     &quot;JavaScript Debug.register.html.executor&quot;: &quot;Run&quot;,
     &quot;JavaScript Debug.upload.html.executor&quot;: &quot;Debug&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
@@ -85,11 +96,54 @@
       <recent name="C:\Users\xu.anlun\Desktop\Program Practice\苍穹外卖学习笔记\0.登录功能与文件上传\login-fileUpload-code\src\main\resources\static" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.LoginFileUploadCodeApplication">
-    <configuration name="register.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/login-fileUpload-code/static/register.html" useBuiltInWebServerPort="true">
-      <method v="2" />
+  <component name="RunManager" selected="JUnit.JwtTest.testGenerateJwt">
+    <configuration name="JwtTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="login-fileUpload-code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.loginfileuploadcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.loginfileuploadcode" />
+      <option name="MAIN_CLASS_NAME" value="com.loginfileuploadcode.JwtTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="upload.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/login-fileUpload-code/static/upload.html" useBuiltInWebServerPort="true">
+    <configuration name="JwtTest.testGenerateJwt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="login-fileUpload-code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.loginfileuploadcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.loginfileuploadcode" />
+      <option name="MAIN_CLASS_NAME" value="com.loginfileuploadcode.JwtTest" />
+      <option name="METHOD_NAME" value="testGenerateJwt" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KeyGenerator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="login-fileUpload-code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.loginfileuploadcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.loginfileuploadcode" />
+      <option name="MAIN_CLASS_NAME" value="com.loginfileuploadcode.KeyGenerator" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="register.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/login-fileUpload-code/static/register.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="registerJS.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/main/resources/static/json/registerJS.js" working-dir="$PROJECT_DIR$/src/main/resources/static/json">
@@ -104,9 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JwtTest.testGenerateJwt" />
+        <item itemvalue="JUnit.JwtTest" />
+        <item itemvalue="JUnit.KeyGenerator" />
         <item itemvalue="JavaScript Debug.register.html" />
         <item itemvalue="Node.js.registerJS.js" />
-        <item itemvalue="JavaScript Debug.upload.html" />
       </list>
     </recent_temporary>
   </component>
@@ -163,6 +219,22 @@
       <workItem from="1768461503880" duration="3000" />
       <workItem from="1768462409776" duration="370000" />
       <workItem from="1768525167118" duration="29000" />
+      <workItem from="1768537788498" duration="350000" />
+      <workItem from="1768538154833" duration="384000" />
+      <workItem from="1768539585197" duration="274000" />
+      <workItem from="1768540076315" duration="122000" />
+      <workItem from="1768540249428" duration="228000" />
+      <workItem from="1768541022681" duration="513000" />
+      <workItem from="1768543602779" duration="614000" />
+      <workItem from="1768544706446" duration="10000" />
+      <workItem from="1768544719812" duration="98000" />
+      <workItem from="1768544862679" duration="53000" />
+      <workItem from="1768544928703" duration="432000" />
+      <workItem from="1768545401348" duration="30000" />
+      <workItem from="1768545449662" duration="123000" />
+      <workItem from="1768545610985" duration="124000" />
+      <workItem from="1768545781013" duration="755000" />
+      <workItem from="1768546721752" duration="167000" />
     </task>
     <servers />
   </component>

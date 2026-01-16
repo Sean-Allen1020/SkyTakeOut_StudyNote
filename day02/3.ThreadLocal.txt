@@ -8,7 +8,7 @@
 	该空间的三种方法：
 			public void set(T value);
 				T    get();
-		            	            void remove();
+		        void remove();
 	一般会将ThreadLocal封装到一个工具类中，方便使用，不用每次都new
 
 - 使用流程：
