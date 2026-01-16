@@ -1,0 +1,98 @@
+全称：Json Web Token - Json数据格式的安全传输信息
+
+构成：
+    - Header，记录令牌类型，签名算法等。        如：{"alg":"HS256", "type":"JWT"}
+    - PayLoad，记录一些自定义信息，默认信息等。 如：{"id":"1", "username":"Tom"}   
+
+      以上两者的原始数据都为Json格式，是对Json数据进行了Base64加密后得到的
+      
+    - Signature，防止token被篡改，确保安全性。是将Header，PayLoad融入，并加入指定密钥，通过指定签名算法，如Base64来计算而来的。
+
+令牌生成与解析的方法：
+    1. pom.xml里引入jjwt依赖：
+            <!-- JWT令牌依赖 -->
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>0.13.0</version>
+            </dependency>
+    
+    2. Jwt令牌生成：
+            String jwt = Jwts.builder()
+                        .signWith(SecretKey key)        //密钥
+                        .claims(map)                    //自定义信息
+                        .expiration(new Date(System.currentTimeMillis() + 3600000))     //令牌生效时间
+                        .compact();                     //生成令牌           
+            
+            - 其中在，在jjwt的13版本后，密钥必须满足加密算法的长度才能不报错，比如 HS256 的密钥必须大于 256bits = 32bytes
+            可以通过以下方法生成满足长度的密钥后，编码成字符串存入 Jwts属性封装类中(JwtProperties)，存入的方式可以用yml配置
+
+                        Key key = Jwts.SIG.HS256.key().build();     
+                        String keyBase64 = Encoders.BASE64.encode(key.getEncoded());
+
+            - 当然也可以自己设置足够长密钥。
+
+            - 而字符串形式的密钥要转换成 SecretKe类 才能插入到 signWith() 方法里：
+                        SecretKey secretKey = hmacShaKeyFor(Decoders.BASE64.decode(keyBase64));
+
+            
+            - 另外，map自定义信息也需要自己创建
+                    Map<String,Object> map = new HashMap<>();
+    
+    3. Jwt令牌解析：
+            //1. 解码密钥字符串，并转换为SecretKey类
+            SecretKey secretKey = hmacShaKeyFor(Decoders.BASE64.decode(keyBase64));
+
+            //2. 解析Jwt令牌，获得Claims集合(本质Map)
+            Claims claims = Jwts.parser()
+                            .verifyWith(secretKey)     //验证签名密钥
+                            .build()
+                            .parseSignedClaims(token)   //解析令牌
+                            .getPayload();
+
+            claims里存有解析出来的自定义信息，令牌有效时间等Jwts属性封装类中的内容
+
+-----------------------------------------------------------------------------------------------------------------------------------
+完整代码 (测试类，非正式项目代码)
+
+public class JwtTest {
+    /**
+     * 生成Jwt令牌
+     */
+    @Test
+    public void testGenerateJwt(){
+
+        //1. 自定义信息
+        Map<String,Object> map = new HashMap<>();
+        map.put("id", 1);
+        //2. 签名密钥
+        // 字符串形式的Base64编码密钥需要解码后通过hmacShaKeyFor()方法转换成Key类才能存入signWith里
+        SecretKey key = hmacShaKeyFor(Decoders.BASE64.decode("+bQk2X5Wn9J1IbWDPPXEUnY9wYSdNWoDOPgTH3fpgEY="));
+
+        //3. 生成令牌
+        String jwt = Jwts.builder()
+                    .signWith(key)     //签名密钥
+                    .claims(map)    //自定义信息
+                    .expiration(new Date(System.currentTimeMillis() + 3600000)) //令牌生效时间
+                    .compact();     //生成令牌
+
+        System.out.println(jwt);
+    }
+
+    /**
+     * 解析Jwt令牌
+     */
+    @Test
+    public void testParseJwt(){
+        String key = "+bQk2X5Wn9J1IbWDPPXEUnY9wYSdNWoDOPgTH3fpgEY=";
+        String token = "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiZXhwIjoxNzY4NTc1NDI0fQ.AVaSAaRNkK9XTNbjLhJfmomiWI0G68vIQ4p0nWoEfpI";
+
+        Claims claims = Jwts.parser()
+                        .verifyWith(hmacShaKeyFor(Decoders.BASE64.decode(key)))     //验证签名密钥
+                        .build()
+                        .parseSignedClaims(token)   //解析令牌
+                        .getPayload();
+
+        System.out.println(claims);
+    }
+}

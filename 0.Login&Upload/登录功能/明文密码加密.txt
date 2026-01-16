@@ -1,0 +1,2 @@
+service层
+	password = DigestUtils.md5DigestAsHex(password.getBytes());
