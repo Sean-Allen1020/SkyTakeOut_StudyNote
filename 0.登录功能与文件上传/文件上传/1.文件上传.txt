@@ -1,9 +1,0 @@
-文件上传功能的后端处理：
-    COntroller层，创建方法(upload)，接收前端传来的文件参数
-
-    @PostMapping("/upload")
-        // 由于返回的是文件路径所以是String     // 参数名与前端保持一致
-    public Result<String> upload(MultipartFile file) {  // Spring封装了一个文件类 MultipartFile ，可以用来接收前端传来的文件
-
-        return Result.success();
-    }
