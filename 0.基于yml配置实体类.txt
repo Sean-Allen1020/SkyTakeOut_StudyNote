@@ -1,0 +1,21 @@
+有的实体类是的成员变量是事先规定好了的。
+此时没有必要专门写方法用setter，而是可以直接通过 application.yml 文件对成员变量的值进行配置
+
+需要配置的实体类：
+
+        @ConfigurationProperties(prefix = "test.jwt")   //配置注解，括号中为** 属性前缀**
+        @Component                      //封装类的实例依然需要存入IOC容器中，用于@AutoWired
+        @Data                           //虽然不需要setter了，但是获取值还是要用getter的
+        public class JwtProperties {
+
+            private String secretKey;
+            private Long ttl;
+        }
+
+yml 文件中设置成员变量的值 (必须要注意缩进)：
+
+        test:
+            jwt:
+                secret-key: 0yk3l8mRUqo0b514atzOJ3a0OFDk2BNX2xBLxEE7xZQ=
+
+                ttl: 3600000

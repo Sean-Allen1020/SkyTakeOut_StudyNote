@@ -4,62 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85a10d96-24d0-4110-8c5b-22bcaa516225" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/.idea/dataSources/2faa0e81-1f45-4ede-b24f-d24d6ecede51.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/.idea/dataSources/2faa0e81-1f45-4ede-b24f-d24d6ecede51/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/.idea/dataSources/2faa0e81-1f45-4ede-b24f-d24d6ecede51/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/.idea/dataSources/2faa0e81-1f45-4ede-b24f-d24d6ecede51/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/.idea/dataSources/2faa0e81-1f45-4ede-b24f-d24d6ecede51/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/src/main/java/com/loginfileuploadcode/LoginFileUploadCodeApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/src/main/java/com/loginfileuploadcode/controller/LoginController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/src/main/java/com/loginfileuploadcode/mapper/EmployeeMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/src/main/java/com/loginfileuploadcode/pojo/Employee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/src/main/java/com/loginfileuploadcode/pojo/EmployeeLoginDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/src/main/java/com/loginfileuploadcode/pojo/EmployeeLoginVO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/src/main/java/com/loginfileuploadcode/pojo/Result.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/src/main/java/com/loginfileuploadcode/properties/JwtProperties.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/src/main/java/com/loginfileuploadcode/service/EmployeeService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/src/main/java/com/loginfileuploadcode/service/impl/EmployeeServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/src/main/java/com/loginfileuploadcode/utils/JwtUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/src/main/resources/static/css/register-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/src/main/resources/static/json/registerJS.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/src/main/resources/static/json/uploadJS.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/src/main/resources/static/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/src/main/resources/static/upload.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/src/test/java/com/loginfileuploadcode/JwtTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/src/test/java/com/loginfileuploadcode/KeyGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/src/test/java/com/loginfileuploadcode/LoginFileUploadCodeApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/target/classes/com/loginfileuploadcode/LoginFileUploadCodeApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/target/classes/com/loginfileuploadcode/controller/LoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/target/classes/com/loginfileuploadcode/mapper/EmployeeMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/target/classes/com/loginfileuploadcode/pojo/Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/target/classes/com/loginfileuploadcode/pojo/EmployeeLoginDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/target/classes/com/loginfileuploadcode/pojo/EmployeeLoginVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/target/classes/com/loginfileuploadcode/pojo/Result.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/target/classes/com/loginfileuploadcode/service/EmployeeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/target/classes/com/loginfileuploadcode/service/impl/EmployeeServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/target/classes/static/css/register-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/target/classes/static/json/registerJS.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/target/classes/static/json/uploadJS.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/target/classes/static/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/target/classes/static/upload.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/target/test-classes/com/loginfileuploadcode/KeyGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/login-fileUpload-code/target/test-classes/com/loginfileuploadcode/LoginFileUploadCodeApplicationTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/文件上传/1.文件上传.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/登录功能/Jwt令牌生成解析.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.登录功能与文件上传/登录功能/明文密码加密.txt" beforeDir="false" />
+    <list default="true" id="85a10d96-24d0-4110-8c5b-22bcaa516225" name="Changes" comment="更新到生成jwt，以及利用全局异常处理器验证分别账号密码">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +16,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Exception" />
       </list>
     </option>
   </component>
@@ -180,10 +127,26 @@
       <workItem from="1768577375636" duration="709000" />
       <workItem from="1768578099650" duration="124000" />
       <workItem from="1768578242543" duration="585000" />
+      <workItem from="1768578892307" duration="458000" />
+      <workItem from="1768717618964" duration="391000" />
+      <workItem from="1768718124915" duration="21000" />
     </task>
+    <task id="LOCAL-00001" summary="更新到生成jwt，以及利用全局异常处理器验证分别账号密码">
+      <option name="closed" value="true" />
+      <created>1768579258503</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1768579258503</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="更新到生成jwt，以及利用全局异常处理器验证分别账号密码" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新到生成jwt，以及利用全局异常处理器验证分别账号密码" />
   </component>
 </project>
