@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="85a10d96-24d0-4110-8c5b-22bcaa516225" name="Changes" comment="更新到生成jwt，以及利用全局异常处理器验证分别账号密码">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/LoginFileUploadCodeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/LoginFileUploadCodeApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/json/uploadJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/json/uploadJS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/upload.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Exception" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -130,6 +133,7 @@
       <workItem from="1768578892307" duration="458000" />
       <workItem from="1768717618964" duration="391000" />
       <workItem from="1768718124915" duration="21000" />
+      <workItem from="1768741866703" duration="4511000" />
     </task>
     <task id="LOCAL-00001" summary="更新到生成jwt，以及利用全局异常处理器验证分别账号密码">
       <option name="closed" value="true" />

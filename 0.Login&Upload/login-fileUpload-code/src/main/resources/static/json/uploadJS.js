@@ -8,7 +8,10 @@ createApp({
     },
 
     methods: {
-
+        logout(){
+            console.log("uploadJS loaded");
+            window.location.replace(`${window.location.origin}/register.html`);
+        }
     },
     mounted() {
     },
