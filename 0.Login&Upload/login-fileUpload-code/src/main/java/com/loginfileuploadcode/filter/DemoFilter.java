@@ -6,7 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.io.IOException;
 
 @Slf4j
-@WebFilter(urlPatterns = "/*")  // * 为占位符，表示拦截所有请求
+//@WebFilter(urlPatterns = "/*")  // * 为占位符，表示拦截所有请求
 public class DemoFilter implements Filter {
 
     //初始化方法，web服务器启动的时候执行一次，不需要时可以不重写

@@ -1,13 +1,10 @@
 package com.loginfileuploadcode.utils;
 
-import com.loginfileuploadcode.pojo.EmployeeLoginDTO;
-import com.loginfileuploadcode.properties.JwtProperties;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;
 import javax.crypto.SecretKey;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Map;
 
 import static io.jsonwebtoken.security.Keys.hmacShaKeyFor;
