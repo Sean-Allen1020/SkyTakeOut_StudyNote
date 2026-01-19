@@ -1,34 +1,59 @@
 package com.loginfileuploadcode.filter;
 
+import com.loginfileuploadcode.properties.JwtProperties;
+import com.loginfileuploadcode.utils.JwtUtil;
+import io.jsonwebtoken.Claims;
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebFilter;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.IOException;
 
 @Slf4j
-//@WebFilter(urlPatterns = "/login")
+@WebFilter(urlPatterns = "/*")
 public class TokenFilter implements Filter {
 
-    //初始化方法
-    public void init(FilterConfig filterConfig) throws ServletException {
-        log.info("init 过滤器初始化方法");
-    }
+    private JwtProperties jwtProperties;
 
     //拦截请求方法
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        //拦截前端发送的请求
-        log.info("doFilter 过滤器拦截了请求");
-        log.info("拦截前逻辑...");
-        //放行请求
-        filterChain.doFilter(servletRequest, servletResponse);
-        //放行后
-        log.info("doFilter 过滤器放行了请求");
-        log.info("拦截后逻辑...");
-    }
 
-    //销毁方法
-    public void destroy() {
-        log.info("destroy 过滤器销毁方法");
+        HttpServletRequest request = (HttpServletRequest) servletRequest;
+        HttpServletResponse response = (HttpServletResponse) servletResponse;
+
+        // 1. 获取请求路径
+        String uri = request.getRequestURI();
+
+        // 2. 判断路径是否 包含 登录路径，如果有就直接放行
+        if (uri.contains("/login") || uri.contains("/CSS/") || uri.contains("/json/")) {
+            log.info("登录请求，放行");
+            filterChain.doFilter(request, response);
+            return;
+        }
+        // 3. 获取请求头中的token
+        String token = request.getHeader("token");
+
+        // 4. 并判断token是否存在或是空字符串
+        if (token == null || token.isEmpty()) {
+            log.info("令牌不存在，响应401");
+            // 设置响应码为401，以返回给前端            401
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            return;
+        }
+        // 5. 校验token
+        try{
+            JwtUtil.parseJwt(token, jwtProperties.getSecretKey());
+        }catch (Exception e){
+            log.info("令牌非法，响应401");
+            // 设置响应码为401，以返回给前端            401
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            return;
+        }
+        // 6. 校验通过则放行
+        log.info("令牌合法，放行");
+        filterChain.doFilter(request, response);
     }
 }

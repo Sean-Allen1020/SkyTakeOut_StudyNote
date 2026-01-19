@@ -31,18 +31,18 @@ public class JwtUtil {
 
     /**
      * 解析Jwt令牌
-     * @param jwt
+     * @param token
      * @param secretKey
      * @return
      */
-    public static Claims parseJwt(String jwt, String secretKey) {
+    public static Claims parseJwt(String token, String secretKey) {
 
         SecretKey key = hmacShaKeyFor(Decoders.BASE64.decode(secretKey));
 
         Claims claims = Jwts.parser()
                         .verifyWith(key)
                         .build()
-                        .parseClaimsJws(jwt)
+                        .parseClaimsJws(token)
                         .getPayload();
         return claims;
     }
