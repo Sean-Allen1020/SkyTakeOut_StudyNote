@@ -57,7 +57,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.LoginFileUploadCodeApplication.executor": "Debug",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/xu.anlun/Desktop/Program Practice/苍穹外卖学习笔记/0.Login&Upload/login-fileUpload-code",
+    "last_opened_file_path": "C:/Users/xu.anlun/Desktop/Program Practice/SkyTakeOut_StudyNote/0.Login&Upload/login-fileUpload-code",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -130,6 +130,7 @@
       <workItem from="1768718124915" duration="21000" />
       <workItem from="1768741866703" duration="4511000" />
       <workItem from="1768808892999" duration="31000" />
+      <workItem from="1768809051341" duration="533000" />
     </task>
     <task id="LOCAL-00001" summary="更新到生成jwt，以及利用全局异常处理器验证分别账号密码">
       <option name="closed" value="true" />
