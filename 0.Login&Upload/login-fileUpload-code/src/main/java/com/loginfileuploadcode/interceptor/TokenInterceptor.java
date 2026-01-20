@@ -20,14 +20,10 @@ public class TokenInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
-//        // 1. 获取请求路径
-//        String uri = request.getRequestURI();
-//
-//        // 2. 判断路径是否 包含 登录路径，如果有就直接放行
-//        if (uri.contains("/login") || uri.contains("/index.html") || uri.contains("/CSS/") || uri.contains("/json/")) {
-//            log.info("登录请求，放行");
-//            return true;
-//        }
+        // 1. 获取请求路径
+        // 2. 判断路径是否 包含 登录路径，如果有就直接放行
+        //以上两个步骤在configuration包中的 WebConfig类中实现
+
         // 3. 获取请求头中的token
         String token = request.getHeader("token");
         // 4. 并判断token是否存在或是空字符串

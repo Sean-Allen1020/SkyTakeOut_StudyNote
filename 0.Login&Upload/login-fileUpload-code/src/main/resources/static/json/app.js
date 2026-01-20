@@ -130,13 +130,50 @@ const LoginView = {
 const UploadView = {
     template: `
     <div style="padding:16px;">
-      <h2>Hello World</h2>
+      <form @submit.prevent="upload">
+        <label>
+          图片：
+          <input type="file" name="file" accept="image/*" @change="onFileChange">
+        </label>
+        <button type="submit">上传</button>
+      </form>
+
+      <div v-if="img">
+        <img :src="img" alt="preview" style="max-width:300px; margin-top:12px;">
+      </div>
+
       <button @click="toTestPage">TEST PAGE</button>
       <br>
       <button @click="logout">ログアウト</button>
     </div>
   `,
+    data() {
+        return {
+            file: null,
+            img: ""
+        };
+    },
     methods: {
+        onFileChange(e) {
+            this.file = e.target.files?.[0] ?? null;
+        },
+        async getImg() {
+            const res = await axios.get("/img");
+            this.img = res.data.data;
+        },
+        async upload() {
+            if (!this.file) return alert("请选择图片");
+
+            const fd = new FormData();
+            // 这里的 "file" 必须和后端接收字段名一致（你 input 的 name="file"）
+            fd.append("file", this.file);
+
+            // 不要手动设置 Content-Type，让浏览器自动带 boundary
+            await axios.post("/upload", fd);
+
+            await this.getImg();
+        },
+
         async toTestPage() {
             const res = await axios.get("/testPage");
             if (res.data.code === 1) {
@@ -147,6 +184,9 @@ const UploadView = {
             localStorage.removeItem("token");
             this.$router.replace("/login");
         }
+    },
+    mounted() {
+        this.getImg();
     }
 };
 
