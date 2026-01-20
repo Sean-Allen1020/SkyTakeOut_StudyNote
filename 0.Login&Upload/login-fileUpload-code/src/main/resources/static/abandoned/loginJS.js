@@ -30,27 +30,20 @@ createApp({
 
             //登录成功判定，并获取token
             if(res.data.code === 1){  //login success
-                // //token存入变量
-                // const token = res.data.data.token;
-                // if(!token){
-                //     alert("login success, but no token from backend!");
-                //     return;
-                // }
-                // //token存入库里，用于拦截验证等
-                // localStorage.setItem('token', token);
-                // // 把 JWT 放到 axios 的默认请求头里（Authorization: Bearer xxx）
-                // // 这样后续所有 axios 请求都会自动携带 token，后端拦截器才能识别用户身份
-                // axios.defaults.headers.common['Authorization'] = 'Bearer ' + token;
-                //
-                // alert(res.data.msg) //login success 表示
+                //储存token
+                const token = res.data.data.token;
+                localStorage.setItem('token', token);
                 //系统页面跳转
-                window.location.replace(`${window.location.origin}/upload.html`);
                 ElMessage.success('ログイン成功');
+                window.location.replace(`/upload.html`);
             }else{
-                alert(res.data.msg);//login fail 表示
+                ElMessage.error(res.data.msg || "ログイン失敗");//login fail 表示
             }
         }
     },
     mounted() {
+        if (!localStorage.getItem("token")) {
+            window.location.replace("/login.html");
+        }
     },
 }).mount('#app')

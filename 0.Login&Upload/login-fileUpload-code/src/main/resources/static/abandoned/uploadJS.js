@@ -6,11 +6,10 @@ createApp({
 
         }
     },
-
     methods: {
-        upload(){
-            console.log("uploadJS loaded");
-            window.location.replace(`${window.location.origin}/upload.html`);
+        testPage(){
+            console.log("testPage loaded");
+            window.location.replace(`${window.location.origin}/testPage.html`);
         },
 
         logout(){
@@ -19,5 +18,8 @@ createApp({
         }
     },
     mounted() {
+        if (!localStorage.getItem("token")) {
+            window.location.replace("/login.html");
+        }
     },
 }).mount('#app')

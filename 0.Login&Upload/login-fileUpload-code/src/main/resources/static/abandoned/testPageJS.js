@@ -8,9 +8,9 @@ createApp({
     },
 
     methods: {
-        testPage(){
-            console.log("testPage loaded");
-            window.location.replace(`${window.location.origin}/testPage.html`);
+        upload(){
+            console.log("uploadJS loaded");
+            window.location.replace(`${window.location.origin}/upload.html`);
         },
 
         logout(){
@@ -19,5 +19,8 @@ createApp({
         }
     },
     mounted() {
+        if (!localStorage.getItem("token")) {
+            window.location.replace("/login.html");
+        }
     },
 }).mount('#app')

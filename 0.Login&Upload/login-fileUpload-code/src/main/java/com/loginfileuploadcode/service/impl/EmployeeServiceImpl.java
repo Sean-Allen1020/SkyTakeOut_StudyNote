@@ -2,6 +2,7 @@ package com.loginfileuploadcode.service.impl;
 
 import com.loginfileuploadcode.exception.PasswordErrorException;
 import com.loginfileuploadcode.mapper.EmployeeMapper;
+import com.loginfileuploadcode.pojo.EmployeeLoginVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
