@@ -135,7 +135,7 @@ const UploadView = {
           图片：
           <input type="file" name="file" accept="image/*" @change="onFileChange">
         </label>
-        <button type="submit">上传</button>
+        <button type="submit">upload</button>
       </form>
 
       <div v-if="img">
@@ -158,7 +158,7 @@ const UploadView = {
             this.file = e.target.files?.[0] ?? null;
         },
         async getImg() {
-            const res = await axios.get("/img");
+            const res = await axios.get("/file");
             this.img = res.data.data;
         },
         async upload() {

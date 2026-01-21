@@ -7,6 +7,12 @@ spring:
     username: root
     password: 123
     url: jdbc:mysql://localhost:3306/sky_take_out
+  servlet:
+    multipart:
+#      单个文件最大大小
+      max-file-size: 10MB
+#      一次请求最大大小(一次请求可能带有复数文件，以及请求头其他数据)
+      max-request-size: 100MB
 
 # mybatis
 mybatis:
@@ -26,5 +32,4 @@ test:
     secret-key: 0yk3l8mRUqo0b514atzOJ3a0OFDk2BNX2xBLxEE7xZQ=
 #    有效期
     ttl: 3600000
-
 
