@@ -1,8 +1,9 @@
 **/target/
 .idea
-**/.idea/
+**/.idea
 *.iml
 *.class
 *Test.java
 **/test/
 0.Login&Upload/文件上传/AccessKey.csv
+tall git-filter-repo
