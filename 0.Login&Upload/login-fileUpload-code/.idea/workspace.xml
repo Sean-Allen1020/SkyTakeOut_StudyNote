@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85a10d96-24d0-4110-8c5b-22bcaa516225" name="Changes" comment="更新拦截器模板代码" />
+    <list default="true" id="85a10d96-24d0-4110-8c5b-22bcaa516225" name="Changes" comment="更新拦截器模板代码">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/controller/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/controller/UploadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/handler/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/handler/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/mapper/UploadMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/mapper/FileMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/service/UploadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/service/FileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/service/impl/UploadServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/service/impl/FileServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/json/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/json/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../文件上传/1.文件上传-本地存储.md" beforeDir="false" afterPath="$PROJECT_DIR$/../文件上传/1.文件上传-本地存储.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,7 +86,7 @@
       <recent name="C:\Users\xu.anlun\Desktop\Program Practice\SkyTakeOut_StudyNote\0.Login&amp;Upload\login-fileUpload-code\src\main\resources\static\abandoned" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.UploadDemo">
+  <component name="RunManager" selected="Spring Boot.LoginFileUploadCodeApplication">
     <configuration name="UploadDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.loginfileuploadcode.UploadDemo" />
       <module name="login-fileUpload-code" />
@@ -179,6 +188,11 @@
       <workItem from="1768986555935" duration="436000" />
       <workItem from="1768987024831" duration="180000" />
       <workItem from="1769042194654" duration="124000" />
+      <workItem from="1769047984836" duration="4865000" />
+      <workItem from="1769056978565" duration="389000" />
+      <workItem from="1769057410268" duration="544000" />
+      <workItem from="1769058008965" duration="2295000" />
+      <workItem from="1769060346184" duration="2626000" />
     </task>
     <task id="LOCAL-00001" summary="更新到生成jwt，以及利用全局异常处理器验证分别账号密码">
       <option name="closed" value="true" />

@@ -1,4 +1,5 @@
 package com.loginfileuploadcode.handler;
+import com.aliyun.oss.ServiceException;
 import com.loginfileuploadcode.exception.PasswordErrorException;
 import com.loginfileuploadcode.pojo.Result;
 import lombok.extern.slf4j.Slf4j;
@@ -30,5 +31,11 @@ public class GlobalExceptionHandler {
     public Result handleException(PasswordErrorException e){
         log.error("异常 {}", e.getMessage());
         return Result.error("パスワードは正しくない");
+    }
+
+    @ExceptionHandler
+    public Result handleException(ServiceException e){
+        log.error("异常 {}", e.getMessage());
+        return Result.error("File upload failed");
     }
 }

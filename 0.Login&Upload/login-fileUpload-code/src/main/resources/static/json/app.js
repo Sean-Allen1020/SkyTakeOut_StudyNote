@@ -157,10 +157,10 @@ const UploadView = {
         onFileChange(e) {
             this.file = e.target.files?.[0] ?? null;
         },
-        async getImg() {
-            const res = await axios.get("/file");
-            this.img = res.data.data;
-        },
+        // async getImg() {
+        //     const res = await axios.get("/file");
+        //     this.img = res.data.data;
+        // },
         async upload() {
             if (!this.file) return alert("请选择图片");
 
@@ -170,8 +170,8 @@ const UploadView = {
 
             // 不要手动设置 Content-Type，让浏览器自动带 boundary
             await axios.post("/upload", fd);
-
-            await this.getImg();
+            const res = res.data;
+            this.img = res.data.data;
         },
 
         async toTestPage() {
