@@ -6,13 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="85a10d96-24d0-4110-8c5b-22bcaa516225" name="Changes" comment="更新拦截器模板代码">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/controller/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/controller/UploadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/handler/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/handler/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/mapper/UploadMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/mapper/FileMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/service/UploadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/service/FileService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/service/impl/UploadServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/service/impl/FileServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/json/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/json/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../文件上传/1.文件上传-本地存储.md" beforeDir="false" afterPath="$PROJECT_DIR$/../文件上传/1.文件上传-本地存储.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../文件上传/1.文件上传-OSS上传.md" beforeDir="false" afterPath="$PROJECT_DIR$/../文件上传/1.文件上传-OSS上传.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../登录功能/4.Jwt令牌认知校验-Interceptor.md" beforeDir="false" afterPath="$PROJECT_DIR$/../登录功能/4.Jwt令牌认知校验-Interceptor.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,6 +188,10 @@
       <workItem from="1769057410268" duration="544000" />
       <workItem from="1769058008965" duration="2295000" />
       <workItem from="1769060346184" duration="2626000" />
+      <workItem from="1769133235815" duration="2000" />
+      <workItem from="1769133674012" duration="46000" />
+      <workItem from="1769134582176" duration="13000" />
+      <workItem from="1769146517016" duration="54000" />
     </task>
     <task id="LOCAL-00001" summary="更新到生成jwt，以及利用全局异常处理器验证分别账号密码">
       <option name="closed" value="true" />
