@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85a10d96-24d0-4110-8c5b-22bcaa516225" name="Changes" comment="更新拦截器模板代码">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../文件上传/1.文件上传-OSS上传.md" beforeDir="false" afterPath="$PROJECT_DIR$/../文件上传/1.文件上传-OSS上传.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../登录功能/4.Jwt令牌认知校验-Interceptor.md" beforeDir="false" afterPath="$PROJECT_DIR$/../登录功能/4.Jwt令牌认知校验-Interceptor.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -192,6 +192,7 @@
       <workItem from="1769133674012" duration="46000" />
       <workItem from="1769134582176" duration="13000" />
       <workItem from="1769146517016" duration="54000" />
+      <workItem from="1769431671150" duration="845000" />
     </task>
     <task id="LOCAL-00001" summary="更新到生成jwt，以及利用全局异常处理器验证分别账号密码">
       <option name="closed" value="true" />
