@@ -33,8 +33,8 @@ public class UploadController {
     public Result upload(MultipartFile file) throws IOException, ClientException {
         log.info("文件 {}", file);
         String url = aliyunOSSOperator.upload(file);
-        fileService.upload(url);
 
+        fileService.upload(url);
         return Result.success(url);
     }
 }

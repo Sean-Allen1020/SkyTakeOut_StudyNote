@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85a10d96-24d0-4110-8c5b-22bcaa516225" name="Changes" comment="更新拦截器模板代码">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../登录功能/4.Jwt令牌认知校验-Interceptor.md" beforeDir="false" afterPath="$PROJECT_DIR$/../登录功能/4.Jwt令牌认知校验-Interceptor.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/controller/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/controller/UploadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../文件上传/1.文件上传-OSS上传.md" beforeDir="false" afterPath="$PROJECT_DIR$/../文件上传/1.文件上传-OSS上传.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,6 +193,10 @@
       <workItem from="1769134582176" duration="13000" />
       <workItem from="1769146517016" duration="54000" />
       <workItem from="1769431671150" duration="845000" />
+      <workItem from="1769655380003" duration="291000" />
+      <workItem from="1769659796151" duration="17000" />
+      <workItem from="1769662734037" duration="107000" />
+      <workItem from="1769663012418" duration="6000" />
     </task>
     <task id="LOCAL-00001" summary="更新到生成jwt，以及利用全局异常处理器验证分别账号密码">
       <option name="closed" value="true" />
