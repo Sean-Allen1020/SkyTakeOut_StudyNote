@@ -7,7 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
-          <entry name="$USER_HOME$/IDEA/Maven/apache-maven-3.9.11/mvn_repo/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
+          <entry name="$PROJECT_DIR$/../../../../../IDEA/Maven/apache-maven-3.9.11/mvn_repo/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
         </processorPath>
         <module name="login-fileUpload-code" />
       </profile>
@@ -19,12 +19,15 @@
         <module name="aliyun-oss-spring-boot-starter" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="21" />
+    <bytecodeTargetLevel target="21">
+      <module name="aliyun-oss-spring-boot-starter (1)" target="21" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="aliyun-oss-spring-boot-autoconfigure" options="-parameters" />
       <module name="aliyun-oss-spring-boot-starter" options="-parameters" />
+      <module name="aliyun-oss-spring-boot-starter (1)" options="-parameters" />
       <module name="login-fileUpload-code" options="-parameters" />
     </option>
   </component>
