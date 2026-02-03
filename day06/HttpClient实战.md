@@ -6,8 +6,9 @@
 - HttpGet
 - HttpPost
 
-  - `HttpClients`           ：工厂类，用于创建 HttpClient
-  - `CloseableHttpClient`   ：常用实现，支持资源关闭
+  - `HttpClient`            ：用于发送一个 Http 请求
+  - `HttpClients`           ：构建器，用于创建 HttpClient 对象
+  - `CloseableHttpClient`   ：常用实现类，支持资源关闭
   - `HttpGet / HttpPost`    ：具体请求类型
 
 ------------------------------------------------------------
@@ -16,5 +17,63 @@
 
 1. 创建 HttpClient 对象
 2. 创建 Http 请求对象（HttpGet / HttpPost）
-3. 调用 execute() 方法发送请求并获取响应 -->
+3. 调用 execute() 方法发送请求并获取响应
+4. 关闭资源 -->
 
+### 代码演示：
+```java
+    @Test
+    public void testGET() throws IOException {
+        // 1. 创建HttpClient对象
+        CloseableHttpClient httpClient = HttpClients.createDefault();
+
+        // 2. 创建 Http 请求对象（HttpGet）
+        HttpGet httpGet = new HttpGet("http://localhost:8080/user/shop/status");
+
+        // 3. 调用 execute() 方法,发送请求并获取响应
+        CloseableHttpResponse response = httpClient.execute(httpGet);
+
+        // 获取响应的状态码
+        int statusCode = response.getStatusLine().getStatusCode();
+        System.out.println("响应状态码: " + statusCode);
+        // 获取响应数据
+        String body = EntityUtils.toString(response.getEntity());
+        System.out.println("响应数据: " + body);
+
+        // 4. 关闭资源
+        response.close();
+        httpClient.close();
+    }
+```
+--------------------------------------
+```java
+@Test
+    public void testPOST() throws IOException {
+        // 1. 创建HttpClient对象
+        CloseableHttpClient httpClient = HttpClients.createDefault();
+
+        // 2. 创建 Http 请求对象（HttpPost）
+        HttpPost httpPost = new HttpPost("http://localhost:8080/admin/employee/login");
+
+        // 3. 调用 execute() 方法,发送请求并获取响应
+        //构造post请求数据
+        JsonObject jsonObject = new JsonObject();
+        jsonObject.addProperty("username", "admin");
+        jsonObject.addProperty("password", "123456");
+        HttpEntity entity = new StringEntity(jsonObject.toString(), ContentType.APPLICATION_JSON);
+        httpPost.setEntity(entity);
+        //发送请求
+        CloseableHttpResponse response = httpClient.execute(httpPost);
+
+        //获取响应的状态码
+        int statusCode = response.getStatusLine().getStatusCode();
+        System.out.println("响应状态码: " + statusCode);
+        //获取响应数据
+        String body = EntityUtils.toString(response.getEntity());
+        System.out.println("响应数据: " + body);
+
+        // 4. 关闭资源
+        response.close();
+        httpClient.close();
+    }
+```

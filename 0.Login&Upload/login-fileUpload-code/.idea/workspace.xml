@@ -5,17 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85a10d96-24d0-4110-8c5b-22bcaa516225" name="Changes" comment="更新拦截器模板代码">
-      <change beforePath="$PROJECT_DIR$/../../0.Configuration/3.第三方依赖自动配置.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../0.Configuration/3.第三方依赖自动配置.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0.Configuration/4.自定义stater.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aliyun-oss-spring-boot-autoconfigure/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/configuration/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/configuration/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/interceptor/TokenInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/interceptor/TokenInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day06/HttpClient.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../day06/HttpClient.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day06/HttpClient实战.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../day06/HttpClient实战.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/xu.anlun/Desktop/Program Practice/SkyTakeOut_StudyNote/0.Login&amp;Upload/login-fileUpload-code" value="38LAElvao1RsRStoO5wq14nijqL" />
+    </persistenceIdMap>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -223,6 +227,8 @@
       <workItem from="1770036599477" duration="102000" />
       <workItem from="1770036781953" duration="2071000" />
       <workItem from="1770038989004" duration="1972000" />
+      <workItem from="1770080085322" duration="1113000" />
+      <workItem from="1770099577477" duration="2179000" />
     </task>
     <task id="LOCAL-00001" summary="更新到生成jwt，以及利用全局异常处理器验证分别账号密码">
       <option name="closed" value="true" />
@@ -250,5 +256,13 @@
     <MESSAGE value="更新到生成jwt，以及利用全局异常处理器验证分别账号密码" />
     <MESSAGE value="更新拦截器模板代码" />
     <option name="LAST_COMMIT_MESSAGE" value="更新拦截器模板代码" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
   </component>
 </project>

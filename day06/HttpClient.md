@@ -1,5 +1,5 @@
 ### 介绍
-- HttpClient 是 Apache Jakarta Common 下的子项目，可以用来提供高效的、最新的、功能丰富的支持 HTTP 协议的客户端编程工具包，并且它支持 HTTP 协议最新的版本和建议。
+- HttpClient 是 Apache Jakarta Common 下的子项目，可以用来提供高效的、最新的、功能丰富的支持 HTTP 协议的**客户端编程工具包**，并且它支持 HTTP 协议最新的版本和建议。
 
 ------------------------------------------------------------
 ### Maven 依赖
@@ -12,15 +12,15 @@
 ```
 ------------------------------------------------------------
 ### 核心 API
-- HttpClient
 - HttpClients
+- HttpClient
 - CloseableHttpClient
 - HttpGet
 - HttpPost
-
-  - `HttpClients`           ：工厂类，用于创建 HttpClient
-  - `CloseableHttpClient`   ：常用实现，支持资源关闭
-  - `HttpGet / HttpPost`    ：具体请求类型
+  - `HttpClients`           ：构建器，用于创建 HttpClient 对象
+  - `HttpClient`            ：用于发送一个 Http 请求
+  - `CloseableHttpClient`   ：是`HttpClient`的常用实现类，支持资源关闭
+  - `HttpGet / HttpPost`    ：Http 请求对象的具体请求类型
 
 ------------------------------------------------------------
 
@@ -29,6 +29,7 @@
 1. 创建 HttpClient 对象
 2. 创建 Http 请求对象（HttpGet / HttpPost）
 3. 调用 execute() 方法发送请求并获取响应
+4. 关闭资源
 
 ------------------------------------------------------------
 
