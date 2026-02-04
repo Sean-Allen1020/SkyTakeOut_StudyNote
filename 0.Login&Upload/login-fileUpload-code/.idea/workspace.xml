@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="85a10d96-24d0-4110-8c5b-22bcaa516225" name="Changes" comment="更新拦截器模板代码">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/configuration/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/configuration/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/interceptor/TokenInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/interceptor/TokenInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../day06/HttpClient.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../day06/HttpClient.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../day06/HttpClient实战.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../day06/HttpClient实战.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +15,7 @@
   <component name="CopilotPersistence">
     <persistenceIdMap>
       <entry key="_C:/Users/xu.anlun/Desktop/Program Practice/SkyTakeOut_StudyNote/0.Login&amp;Upload/login-fileUpload-code" value="38LAElvao1RsRStoO5wq14nijqL" />
+      <entry key="_D:/MyDevelop/MyCode/SkyTakeOut/SkyTakeOut_StudyNote/0.Login&amp;Upload/login-fileUpload-code" value="39CuCAdarudI3bgGsqikgDL1WJI" />
     </persistenceIdMap>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -229,6 +226,11 @@
       <workItem from="1770038989004" duration="1972000" />
       <workItem from="1770080085322" duration="1113000" />
       <workItem from="1770099577477" duration="2179000" />
+      <workItem from="1770212244856" duration="26000" />
+      <workItem from="1770212420528" duration="13000" />
+      <workItem from="1770212699685" duration="35000" />
+      <workItem from="1770212791828" duration="21000" />
+      <workItem from="1770212834797" duration="228000" />
     </task>
     <task id="LOCAL-00001" summary="更新到生成jwt，以及利用全局异常处理器验证分别账号密码">
       <option name="closed" value="true" />
