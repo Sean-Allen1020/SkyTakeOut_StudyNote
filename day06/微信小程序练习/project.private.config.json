@@ -1,8 +1,8 @@
 {
-  "libVersion": "3.14.2",
+  "libVersion": "2.26.2",
   "projectname": "demo1",
   "setting": {
-    "urlCheck": true,
+    "urlCheck": false,
     "coverView": true,
     "lazyloadPlaceholderEnable": false,
     "skylineRenderEnable": false,

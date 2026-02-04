@@ -2,6 +2,24 @@
 <navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
 <scroll-view class="scrollarea" scroll-y type="list">
   <view class="container">
-    Weixin
+    <view>
+      {{msg}}
+    </view>
+    <view>
+      <image style="width: 100px; height: 100px;" src="{{avatarUrl}}"></image>
+      <view>昵称：{{nickName}}</view>
+      <view>性别：{{gender}}</view>
+      <view>授权码：{{code}}</view>
+    </view>
+    <view>
+      <button bind:tap="getUserInfo" type="default">获取用户信息</button>
+    </view>
+    <view>
+      <button bind:tap="wxLogin" type="primary">微信登录</button>
+    </view>
+    <view>
+      <button bind:tap="sendRequest" type="default">发送请求</button>
+    </view>
+    <view>状态：{{status}}</view>
   </view>
 </scroll-view>
