@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85a10d96-24d0-4110-8c5b-22bcaa516225" name="Changes" comment="更新拦截器模板代码">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day07-Redis缓存/0.Redis缓存实现逻辑.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day07-Redis缓存/0.Redis缓存整体逻辑.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day07-Redis缓存/Redis处理缓存模板代码.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,6 +233,7 @@
       <workItem from="1770212699685" duration="35000" />
       <workItem from="1770212791828" duration="21000" />
       <workItem from="1770212834797" duration="228000" />
+      <workItem from="1770346759825" duration="15000" />
     </task>
     <task id="LOCAL-00001" summary="更新到生成jwt，以及利用全局异常处理器验证分别账号密码">
       <option name="closed" value="true" />
