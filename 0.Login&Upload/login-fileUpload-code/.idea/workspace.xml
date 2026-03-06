@@ -231,6 +231,7 @@
       <workItem from="1770212834797" duration="228000" />
       <workItem from="1770346759825" duration="15000" />
       <workItem from="1771897515278" duration="48000" />
+      <workItem from="1772776773829" duration="37000" />
     </task>
     <task id="LOCAL-00001" summary="更新到生成jwt，以及利用全局异常处理器验证分别账号密码">
       <option name="closed" value="true" />
