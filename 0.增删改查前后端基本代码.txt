@@ -13,6 +13,7 @@ Vue框架下的前后端增删改查基本代码写法(后端指controller层)
         @GetMapping("/url")
         public Result page(Integer page, Integer pageSize, String name) { ... }
                             这里可以封装为DTO类，因为是query参数，所以不需要写多余的注释，直接写即可
+			    如果前端传来的是 基本类型集合，则需要显示写上 @RequestParam
 
 删：
     前端：
