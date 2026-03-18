@@ -97,7 +97,7 @@
         }
 
         /**
-         * 路线url拼接
+         * 路线uri拼接
          * @param uri
          * @param origin
          * @param destination
