@@ -2,6 +2,9 @@ package com.loginfileuploadcode.interceptor;
 
 import com.loginfileuploadcode.properties.JwtProperties;
 import com.loginfileuploadcode.utils.JwtUtil;
+import io.jsonwebtoken.ExpiredJwtException;
+import io.jsonwebtoken.JwtException;
+import io.jsonwebtoken.security.SignatureException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.AllArgsConstructor;
@@ -43,12 +46,26 @@ public class TokenInterceptor implements HandlerInterceptor {
         // 5. 校验token
         try{
             JwtUtil.parseJwt(token, jwtProperties.getSecretKey());
-        }catch (Exception e){
-            log.info("令牌非法，响应401");
-            // 设置响应码为401，以返回给前端            401
+        }
+        catch (ExpiredJwtException e) {
+            // token 过期
+            log.info("令牌过期");
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
             return false;
         }
+        catch (SignatureException e) {
+            // 签名不对，可能被篡改，或者密钥不匹配
+            log.info("签名不对，可能被篡改，或者密钥不匹配");
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            return false;
+        }
+        catch (JwtException | IllegalArgumentException e) {
+            // 其余 JWT 非法情况
+            log.info("其余Jwt非法情况");
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            return false;
+        }
+        
         // 6. 校验通过则放行
         log.info("令牌合法，放行");
         return true;
