@@ -9,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
+import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 @Slf4j
@@ -24,6 +25,12 @@ public class TokenInterceptor implements HandlerInterceptor {
         // 1. 获取请求路径
         // 2. 判断路径是否 包含 登录路径，如果有就直接放行
         //以上两个步骤在configuration包中的 WebConfig类中实现
+
+        // 判断当前拦截到的是 Controller方法，还是其它资源
+        if(!(handler instanceof HandlerMethod)){
+            // 如果拦截到的非Controller方法，则放行 (事实上就是放行静态资源)
+            return true;
+        }
 
         // 3. 获取请求头中的token
         String token = request.getHeader("token");

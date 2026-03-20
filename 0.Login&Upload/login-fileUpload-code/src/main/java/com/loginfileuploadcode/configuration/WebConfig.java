@@ -17,10 +17,11 @@ public class WebConfig implements WebMvcConfigurer {
 
         registry.addInterceptor(tokenInterceptor)   // 注册拦截器
                 .addPathPatterns("/**")             // 设置拦截路径， **为所有
-                .excludePathPatterns("/login"       // 放行的请求路径，以及静态资源
-                                    ,"/index.html"
-                                    ,"/CSS/**"
-                                    ,"/json/**"
-                                    ,"/favicon.ico");
+                .excludePathPatterns("/login");     // 放行的请求路径，以及静态资源
+
+//                                    ,"/index.html"
+//                                    ,"/CSS/**"
+//                                    ,"/json/**"
+//                                    ,"/favicon.ico");
     }
 }

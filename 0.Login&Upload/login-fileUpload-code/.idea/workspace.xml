@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85a10d96-24d0-4110-8c5b-22bcaa516225" name="Changes" comment="更新拦截器模板代码">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/loginfileuploadcode/LoginFileUploadCodeApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/loginfileuploadcode/LoginFileUploadCodeApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/loginfileuploadcode/LoginFileUploadCodeApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/loginfileuploadcode/LoginFileUploadCodeApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/configuration/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/configuration/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/interceptor/TokenInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/loginfileuploadcode/interceptor/TokenInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../登录功能/2.Jwt令牌生成解析.md" beforeDir="false" afterPath="$PROJECT_DIR$/../登录功能/2.Jwt令牌生成解析.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +18,7 @@
   </component>
   <component name="CopilotPersistence">
     <persistenceIdMap>
+      <entry key="_C:/Users/Hanatsu/OneDrive/桌面/SkyTakeOut_StudyNote/0.Login&amp;Upload/login-fileUpload-code" value="3BD1vKMShBYarQT5MgpU29G3TMB" />
       <entry key="_C:/Users/xu.anlun/Desktop/Program Practice/SkyTakeOut_StudyNote/0.Login&amp;Upload/login-fileUpload-code" value="38LAElvao1RsRStoO5wq14nijqL" />
       <entry key="_D:/MyDevelop/MyCode/SkyTakeOut/SkyTakeOut_StudyNote/0.Login&amp;Upload/login-fileUpload-code" value="39CuCAdarudI3bgGsqikgDL1WJI" />
     </persistenceIdMap>
@@ -59,32 +61,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.POITest.executor": "Debug",
-    "Application.UploadDemo.executor": "Debug",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JUnit.JwtTest.executor": "Debug",
-    "JUnit.POITest.writeExcel.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.LoginFileUploadCodeApplication.executor": "Debug",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/MyDevelop/MyCode/SkyTakeOut/SkyTakeOut_StudyNote/0.Login&Upload/login-fileUpload-code",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.POITest.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.UploadDemo.executor&quot;: &quot;Debug&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JUnit.JwtTest.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.POITest.writeExcel.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.LoginFileUploadCodeApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Hanatsu/OneDrive/桌面/SkyTakeOut_StudyNote/0.Login&amp;Upload/login-fileUpload-code&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\MyDevelop\MyCode\SkyTakeOut\SkyTakeOut_StudyNote\0.Login&amp;Upload\login-fileUpload-code" />
@@ -271,6 +273,8 @@
       <workItem from="1771897515278" duration="48000" />
       <workItem from="1772776773829" duration="37000" />
       <workItem from="1772955270193" duration="3203000" />
+      <workItem from="1774009056162" duration="38000" />
+      <workItem from="1774009350496" duration="311000" />
     </task>
     <task id="LOCAL-00001" summary="更新到生成jwt，以及利用全局异常处理器验证分别账号密码">
       <option name="closed" value="true" />
